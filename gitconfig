@@ -1,0 +1,23 @@
+[user]
+  name = Bethany Armitage
+  email = bethgrace5@gmail.com
+[core]
+  auto = true
+[color]
+  branch = always
+  diff = always
+  interactive = always
+  status = always
+  log = always
+[alias]
+  co = checkout
+  st = status
+  b = branch
+  log = log --pretty=oneline
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+[branch]
+  autosetuprebase = always
+[push]
+  default = matching
+[receive]
+  denyCurrentBranch = ignore
