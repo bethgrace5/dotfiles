@@ -1,7 +1,5 @@
 "vimrc file Bethany Armitage
 
-set t_Co=256
-
 map <leader>n yyp<C-a>
 
 "change tabs to spaces
@@ -43,6 +41,28 @@ set nowrap
 set laststatus=2
 
 " highlight LineNr ctermfg=grey
+
+" this is supposed to help with system clipboard pasting,
+" doesn't seem to work for mac.
+set clipboard=unnamed
+
+" I never use shift-k,
+" it just makes me stop what I'm doing when I hit it by accident
+nnoremap <S-K> <Nop>
+
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+
+" right arrow puts in paste mode and opens a new line,
+" left arrow udoes passte mode
+nnoremap <silent> <right> :set paste <CR> o
+nnoremap <silent> <left> :set nopaste <CR> <C-O>
 
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
